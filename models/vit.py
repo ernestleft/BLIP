@@ -112,7 +112,7 @@ class Block(nn.Module):
     
 class VisionTransformer(nn.Module):
     """ Vision Transformer
-    A PyTorch impl of : `An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale`  -
+    A PyTorch impl of : `An Image is Worth 16x16 Words: transformersx for Image Recognition at Scale`  -
         https://arxiv.org/abs/2010.11929
     """
     def __init__(self, img_size=224, patch_size=16, in_chans=3, num_classes=1000, embed_dim=768, depth=12,
