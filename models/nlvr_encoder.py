@@ -11,11 +11,11 @@ from torch import nn
 from torch.nn import CrossEntropyLoss
 import torch.nn.functional as F
 
-from transformers.activations import ACT2FN
-from transformers.file_utils import (
+from transformersx.activations import ACT2FN
+from transformersx.file_utils import (
     ModelOutput,
 )
-from transformers.modeling_outputs import (
+from transformersx.modeling_outputs import (
     BaseModelOutputWithPastAndCrossAttentions,
     BaseModelOutputWithPoolingAndCrossAttentions,
     CausalLMOutputWithCrossAttentions,
@@ -26,14 +26,14 @@ from transformers.modeling_outputs import (
     SequenceClassifierOutput,
     TokenClassifierOutput,
 )
-from transformers.modeling_utils import (
+from transformersx.modeling_utils import (
     PreTrainedModel,
     apply_chunking_to_forward,
     find_pruneable_heads_and_indices,
     prune_linear_layer,
 )
-from transformers.utils import logging
-from transformers.models.bert.configuration_bert import BertConfig
+from transformersx.utils import logging
+from transformersx.models.bert.configuration_bert import BertConfig
 
 
 logger = logging.get_logger(__name__)
