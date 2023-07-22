@@ -1,3 +1,19 @@
+==============================================================
+## Due to the fact that WASasquatch/was-node-suite-comfyui uses BLIP to perform the Interrogator, but the latest version of BLIP is from 2022 and requires transformers==4.26.1 to function. At the time of writing this, transformers is now at version transformers==4.31.0. In a lazy and not-so-expert way to resolve this, what was found is to maintain transformers==4.26.1 as "transformersx" and allow the new version of transformers to be used without conflicting with the old one.
+
+## To achieve this, all references of "transformers" in BLIP were replaced with "transformersx".
+
+## Additionally, it was necessary to modify "transformersx/utils/import_utils.py" to refer to itself instead of "transformers".
+
+## Instructions:
+
+## Place "transformersx" (aka transformers==4.26.1) in ".\python_embeded\Lib\site-packages"
+https://drive.google.com/file/d/16jdcw3VASRUWpHnjHKPFYsfi1w_qGAjl/view?usp=drive_link
+
+## Replace the "BLIP" folder in ".\custom_nodes\was-node-suite-comfyui\repos" with this modified version.
+Profit."
+==============================================================
+
 ## BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
 
 ## Announcement: BLIP is now officially integrated into [LAVIS](https://github.com/salesforce/LAVIS) - a one-stop library for language-and-vision research and applications!
