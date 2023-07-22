@@ -5,7 +5,7 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  * By Junnan Li
  * Based on huggingface code base
- * https://github.com/huggingface/transformers/blob/v4.15.0/src/transformers/models/bert
+ * https://github.com/huggingface/transformersx/blob/v4.15.0/src/transformersx/models/bert
 '''
 
 import math
@@ -21,11 +21,11 @@ from torch import nn
 from torch.nn import CrossEntropyLoss
 import torch.nn.functional as F
 
-from transformers.activations import ACT2FN
-from transformers.file_utils import (
+from transformersx.activations import ACT2FN
+from transformersx.file_utils import (
     ModelOutput,
 )
-from transformers.modeling_outputs import (
+from transformersx.modeling_outputs import (
     BaseModelOutputWithPastAndCrossAttentions,
     BaseModelOutputWithPoolingAndCrossAttentions,
     CausalLMOutputWithCrossAttentions,
@@ -36,14 +36,14 @@ from transformers.modeling_outputs import (
     SequenceClassifierOutput,
     TokenClassifierOutput,
 )
-from transformers.modeling_utils import (
+from transformersx.modeling_utils import (
     PreTrainedModel,
     apply_chunking_to_forward,
     find_pruneable_heads_and_indices,
     prune_linear_layer,
 )
-from transformers.utils import logging
-from transformers.models.bert.configuration_bert import BertConfig
+from transformersx.utils import logging
+from transformersx.models.bert.configuration_bert import BertConfig
 
 
 logger = logging.get_logger(__name__)
@@ -870,7 +870,7 @@ class BertLMHeadModel(BertPreTrainedModel):
             decoding (see :obj:`past_key_values`).
         Returns:
         Example::
-            >>> from transformers import BertTokenizer, BertLMHeadModel, BertConfig
+            >>> from transformersx import BertTokenizer, BertLMHeadModel, BertConfig
             >>> import torch
             >>> tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
             >>> config = BertConfig.from_pretrained("bert-base-cased")
