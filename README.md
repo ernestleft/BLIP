@@ -11,7 +11,8 @@
 https://drive.google.com/file/d/16jdcw3VASRUWpHnjHKPFYsfi1w_qGAjl/view?usp=drive_link
 
 ## Replace the "BLIP" folder in ".\custom_nodes\was-node-suite-comfyui\repos" with this modified version.
-Profit."
+## Profit.
+
 ==============================================================
 
 ## BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
